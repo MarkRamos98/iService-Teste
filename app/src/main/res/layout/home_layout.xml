@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cor_secundaria"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarActivitHome">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/matTooBarActivtHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cor_secundaria"
+            app:title="Quack Workes"
+            app:menu="@menu/menu_top_activt_home"
+            app:titleTextColor="@color/cor_texto_claro"
+            app:titleCentered="true"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@id/botNavgationTelaPrincipal"
+       android:layout_below="@id/appBarActivitHome"
+       android:id="@+id/frmLayoutConteiner"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botNavgationTelaPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/cor_texto_claro"
+        app:itemRippleColor="@color/cor_detalhes"
+        android:background="@color/cor_secundaria"
+        app:menu="@menu/menu_activt_home" />
+
+</RelativeLayout>

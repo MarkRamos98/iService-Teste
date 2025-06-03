@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cor_secundaria"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PerfilActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarActivitPerfil">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/matTooBarActivtPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cor_secundaria"
+            app:navigationIcon="@drawable/baseline_arrow_back"
+            app:titleCentered="true"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cor_secundaria"
+        app:tabTextColor="@color/cor_texto_claro"
+        android:id="@+id/tabLayoutPerfil"
+        app:tabIndicatorColor="@color/cor_detalhes">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabMeuPerfil"
+            android:text="Meu perfil"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabMinhaLoja"
+            android:text="Minha Loja"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layContainerFragmentPerfil"/>
+
+
+</LinearLayout>
