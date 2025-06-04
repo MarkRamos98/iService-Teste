@@ -10,4 +10,10 @@
     <color name="cor_confirmar">#54C158</color>
     <color name="cor_recusar">#FF4242</color>
     <color name="cor_tecearia">#0096FF</color>
+
+    <!--Testes-->
+    <color name="card_image_overlay">#80000000</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="card_services_bg">#F5F5F5</color>
 </resources>
