@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/placeholder_shop"
+                android:src="#2c2c2c"
                 tools:ignore="ContentDescription" />
 
             <!-- Favorite button -->
@@ -151,7 +151,7 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_service_chip" />
+                tools:listitem="#2c2c2c" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
