@@ -30,7 +30,8 @@
        android:layout_height="match_parent"
        android:layout_above="@id/botNavgationTelaPrincipal"
        android:layout_below="@id/appBarActivitHome"
-       android:id="@+id/frmLayoutConteiner"/>
+       android:id="@+id/frmLayoutConteiner"
+       android:background="@color/cor_fundo"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/botNavgationTelaPrincipal"

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:icon="@drawable/ic_android_black"
+        android:icon="@drawable/menu_round_button_icon"
         android:title="Home"
         android:enabled="true"
-        android:id="@+id/itemMenuBotHome"/>
+        android:id="@+id/itemMenuBotHome"
+        android:iconTint="@color/cor_texto"/>
     <item
-        android:icon="@drawable/ic_android_black"
+        android:icon="@drawable/favorite_badge"
         android:title="Favoritos"
         android:enabled="true"
-        android:id="@+id/itemMenuBotFavoritos"/>
-    <item
-        android:icon="@drawable/ic_android_black"
-        android:title="Menssagens"
-        android:enabled="true"
-        android:id="@+id/itemMenuBotMenssagens"/>
+        android:id="@+id/itemMenuBotFavoritos"
+        android:iconTint="@color/cor_texto"/>
 
 </menu>

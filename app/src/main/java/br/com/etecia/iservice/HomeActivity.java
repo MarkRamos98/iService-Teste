@@ -81,12 +81,7 @@ public class HomeActivity extends AppCompatActivity {
 
                     fragment = new FragmentFavoritos();
 
-                }else if (item.getItemId() == R.id.itemMenuBotMenssagens){
-
-                    fragment = new FragmentChat();
-
                 }
-
 
                 if(fragment != null){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frmLayoutConteiner,fragment).commit();

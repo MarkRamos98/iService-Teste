@@ -27,7 +27,7 @@
                     android:id="@+id/topAppBarLoja"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/cor_principal"
+                    android:background="@color/cor_secundaria"
                     android:minHeight="?actionBarSize"
                     android:padding="@dimen/tamanho_pequeno"
                     app:navigationIcon="@drawable/baseline_arrow_back"

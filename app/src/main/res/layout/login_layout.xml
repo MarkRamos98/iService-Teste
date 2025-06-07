@@ -11,7 +11,8 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:background="@color/cor_fundo">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                 android:layout_height="50sp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="200dp"
-                android:hint="e-mail" />
+                android:hint="@string/e_mail" />
 
             <EditText
                 android:id="@+id/txtLoginSenha"
@@ -33,7 +34,7 @@
                 android:layout_height="50sp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
-                android:hint="e-mail" />
+                android:hint="@string/senha" />
 
             <Button
                 android:id="@+id/btnLogar"
@@ -41,7 +42,8 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="150dp"
-                android:text="Entrar"
+                android:text="@string/entrar"
+                android:backgroundTint="@color/cor_principal"
                 android:textSize="@dimen/tamanho_grande" />
 
             <Button
@@ -49,7 +51,8 @@
                 android:layout_width="200dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Criar conta"
+                android:text="@string/criar_conta"
+                android:backgroundTint="@color/cor_principal"
                 android:textSize="@dimen/tamanho_grande" />
 
         </LinearLayout>
