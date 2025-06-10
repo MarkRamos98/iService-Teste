@@ -1,145 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="@color/cor_secundaria"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".LojaActivity">
+    android:background="@color/surface">
 
-    <androidx.core.widget.NestedScrollView
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_gradient">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imgFotoLoja"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_shop"
+                app:layout_collapseMode="parallax"/>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBarLoja"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_arrow_back_white"
+                app:title=""/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_marginTop="200dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/topAppBarLoja"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/cor_secundaria"
-                    android:minHeight="?actionBarSize"
-                    android:padding="@dimen/tamanho_pequeno"
-                    app:navigationIcon="@drawable/baseline_arrow_back"
-                    />
-
-            </com.google.android.material.appbar.AppBarLayout>
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="20dp"
-                android:background="@color/cor_fundo"
-                >
-
-                <ImageView
-                    android:id="@+id/imgFotoLoja"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:src="@drawable/foto_imagem" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtNomeLoja"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="(Nome da Loja)"
-                    android:textSize="@dimen/tamanho_maior"
-                    android:fontFamily="@font/titulos"
-                    android:textColor="@color/cor_secundaria"
-                    />
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/onSurface"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.7 ★"
+                        app:chipIcon="@drawable/ic_star"
+                        app:chipBackgroundColor="@color/rating_chip_background"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beleza"
+                        app:chipBackgroundColor="@color/secondaryContainer"/>
+                </com.google.android.material.chip.ChipGroup>
 
                 <TextView
                     android:id="@+id/txtDescricao"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:text="Descrição: Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor "
-                    android:textSize="@dimen/tamanho_grande"
-                    android:fontFamily="@font/textos"
-                    android:textColor="@color/cor_texto"
-                    />
+                    android:layout_marginBottom="24dp"
+                    android:textColor="@color/onSurfaceVariant"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="30dp"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_android_black"
-                        />
-
-                    <TextView
-                        android:id="@+id/txtEnderecoLoja"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Rua Bobo Alegre"
-                        android:fontFamily="@font/textos"
-                        android:textSize="@dimen/tamanho_grande"
-                        android:textColor="@color/cor_texto"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/cor_detalhes_secundarios"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/surfaceVariant">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recServicosLoja"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_gravity="center"
-                    android:background="@color/cor_principal"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:id="@+id/btnContatar"
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/cor_principal"
-                        android:textColor="@color/cor_texto"
-                        android:fontFamily="@font/textos"
-                        android:text="Entrar em Contato"
-                        android:textSize="@dimen/tamanho_grande"
-                        android:layout_gravity="center"
-                        />
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
+                        <TextView
+                            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Informações"
+                            android:textColor="@color/onSurface"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/ic_location"
+                                android:tint="@color/primary"/>
+
+                            <TextView
+                                android:id="@+id/txtEnderecoLoja"
+                                style="@style/TextAppearance.MaterialComponents.Body2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/onSurfaceVariant"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Serviços"
+                    android:textColor="@color/onSurface"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recServicosLoja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContatar"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Entrar em Contato"
+                    app:icon="@drawable/ic_message"
+                    app:iconGravity="textStart"/>
             </LinearLayout>
-
-        </LinearLayout>
-
-
-    </androidx.core.widget.NestedScrollView>
-
-
-</LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
